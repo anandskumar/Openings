@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <h2 style="text-align:center;">Vibha Volunteer Opportunities</h2>
+        <p style="text-align:center;"><small>[Click on any Team/Role to expand or collapse description]</small></p>
+        <div id="listings" class="accordion">
+        </div>
+
+        <script id="job-list" type="text/x-handlebars-template">
+          <h4 class="accordion-toggle">{{role}}</h4>
+            <div class="accordion-content">
+              <p><strong>Role Description:</strong> {{description}}</p>
+              <p><strong>Time Requirement:</strong> {{hours}} per week</p>
+              <p><strong>Duration of the Role:</strong> {{duration}} year(s)</p>
+              <p><strong>Past Experience Needed?:</strong> {{pastExp}}</p>
+              <p><strong>Training Provided?:</strong> {{training}}</p>
+              <p><a href="mailto:{{contact}}?subject=Volunteer%20Opening:%20{{role}}">Apply</a> for this position</p>
+            </div>
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="js/vendor/tabletop.js"></script>
+        <script src="js/vendor/handlebars-v4.0.5.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
